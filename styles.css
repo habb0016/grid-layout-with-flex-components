@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+  }
+  
+  .emoji {
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .emoji h2 {
+    margin: 0;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .emoji a {
+    text-decoration: none;
+    background-color: #781BAA;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .icon {
+    font-size: 4rem;
+  }
+  /* emojis parents emoji for grid display */
+  .emojis {
+      display: grid;
+      /* set up grid (2 col, 2 row) */
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      /* gap between cards */
+      gap: 20px;
+  }
+
+  /* set each child of class emojis in their part of grid */
+  .emojis div:nth-child(1) {
+      /* row 1 col 1 */
+      grid-column: 1;
+      grid-row: 1;   
+}
+
+.emojis div:nth-child(2) {
+    /* row 1 col 2 */
+    grid-column: 2;
+    grid-row: 1;   
+}
+
+.emojis div:nth-child(3) {
+    /* row 2 col 1 */
+    grid-column: 1;
+    grid-row: 2;   
+}
+
+.emojis div:nth-child(4) {
+    /* row 2 col 2 */
+    grid-column: 2;
+    grid-row: 2;   
+}
+/* div with class emoji is parent with display flex */
+div .emoji {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* begin alignment from top */
+    justify-content: flex-start; 
+}
+/* switch position of h2 and icon */
+ .emoji h2 {
+    order: -1;
+}
+
+.emoji .icon {
+    order: -2;
+    /* center icon */
+    text-align: center;
+}
+
+/* align button with bottom of card */
+.emoji a {
+    margin-top: auto;
+}
